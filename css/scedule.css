@@ -1,0 +1,153 @@
+:root {
+  --primer: #3e823e;
+  --bg: #43c643;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  font-family: sans-serif;
+  background-color: #30a630;
+  color: white;
+}
+/*navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(21, 102, 6, 0.518);
+  border-bottom: 2px solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  font-style: italic;
+}
+.navbar .navbar-logo span {
+  color: #3e823e;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 0.3rem;
+}
+.navbar .navbar-nav a:hover {
+  color: #ffffff;
+}
+.navbar .navbar-icon a {
+  color: white;
+  margin: 0;
+}
+
+.scedule {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../gambar/background5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.scedule::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgb(56, 136, 29) 1%,
+    rgba(255, 255, 255, 0) 25%
+  );
+}
+
+.jadwal-perkuliahan {
+  margin: 0 auto;
+}
+.jadwal-perkuliahan table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #4ac03377;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.jadwal-perkuliahan th,
+.jadwal-perkuliahan td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+}
+.jadwal-perkuliahan th {
+  background-color: #50bc2c;
+}
+.jadwal-perkuliahan th:last-child,
+.jadwal-perkuliahan td:last-child {
+  border-right: none; /* Hapus border-right pada elemen terakhir */
+}
+.jadwal-perkuliahan tr:hover {
+  background-color: #7c7a7a33;
+}
+.jadwal-perkuliahan h2 {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(52, 102, 9);
+}
+
+#menu {
+  display: none;
+}
+/*queries*/
+@media (max-width: 1280px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  #menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(9, 160, 24, 0.53);
+    width: 30vw;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: #ffffff;
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+}

@@ -1,0 +1,66 @@
+:root {
+  --primer: #3e823e;
+  --bg: #43c643;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  font-family: sans-serif;
+  color: white;
+}
+.pendaftaran {
+  min-height: 100vh;
+  align-items: center;
+  background-image: url(../gambar/background6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#menu {
+  display: none;
+}
+/*queries*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  #menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(129, 122, 122, 0.429);
+    width: 30vw;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: #ffffff;
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
